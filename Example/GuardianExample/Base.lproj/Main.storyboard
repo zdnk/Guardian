@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GuardianExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bu3-AT-InQ">
+                                <rect key="frame" x="154" y="328.5" width="66" height="30"/>
+                                <state key="normal" title="Biometric"/>
+                                <connections>
+                                    <action selector="biometric" destination="BYZ-38-t0r" eventType="touchUpInside" id="emd-tj-jWC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O97-iz-B42">
+                                <rect key="frame" x="154" y="366.5" width="67" height="30"/>
+                                <state key="normal" title="Passcode"/>
+                                <connections>
+                                    <action selector="passcode" destination="BYZ-38-t0r" eventType="touchUpInside" id="2qF-ww-Skn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9eN-2B-Xld">
+                                <rect key="frame" x="166" y="299" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Bu3-AT-InQ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="5yO-eW-gwg"/>
+                            <constraint firstItem="O97-iz-B42" firstAttribute="centerX" secondItem="Bu3-AT-InQ" secondAttribute="centerX" id="Hid-Q0-2Fl"/>
+                            <constraint firstItem="O97-iz-B42" firstAttribute="top" secondItem="Bu3-AT-InQ" secondAttribute="bottom" constant="8" id="Ltc-1F-6qr"/>
+                            <constraint firstItem="Bu3-AT-InQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="SMG-lP-If6"/>
+                            <constraint firstItem="9eN-2B-Xld" firstAttribute="centerX" secondItem="Bu3-AT-InQ" secondAttribute="centerX" id="bY4-ZZ-DpI"/>
+                            <constraint firstItem="Bu3-AT-InQ" firstAttribute="top" secondItem="9eN-2B-Xld" secondAttribute="bottom" constant="8.5" id="wh6-iV-u0q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="statusLabel" destination="9eN-2B-Xld" id="OlZ-m3-OJI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
